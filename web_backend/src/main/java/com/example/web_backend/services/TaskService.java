@@ -3,8 +3,8 @@ package com.example.web_backend.services;
 import com.example.web_backend.DTO.TaskInstanceDTO;
 import com.example.web_backend.entitys.Task;
 import com.example.web_backend.entitys.TaskInstance;
-import com.example.web_backend.repository.TaskInstanceRepository;
 import com.example.web_backend.repository.TaskRepository;
+import com.example.web_backend.triggerManager.TriggerManager;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,11 +12,12 @@ import java.util.List;
 @Service
 public class TaskService {
     private final TaskRepository taskRepository;
-    private final TaskInstanceRepository taskInstanceRepository;
 
-    public TaskService(TaskRepository taskRepository, TaskInstanceRepository taskInstanceRepository) {
+    private final TriggerManager triggerManager;
+
+    public TaskService(TaskRepository taskRepository, TriggerManager triggerManager) {
         this.taskRepository = taskRepository;
-        this.taskInstanceRepository = taskInstanceRepository;
+        this.triggerManager = triggerManager;
     }
 
     public List<Task> getAll() {
@@ -28,10 +29,7 @@ public class TaskService {
     }
 
     public TaskInstanceDTO triggerTask(long id) {
-        Task task = taskRepository.getById(id);
-        TaskInstance taskInstance = new TaskInstance(task);
-        taskInstance.setStatus("created");
-        TaskInstance save = taskInstanceRepository.save(taskInstance);
-        return new TaskInstanceDTO(save);
+        TaskInstance taskInstance = triggerManager.triggerTask(id);
+        return new TaskInstanceDTO(taskInstance);
     }
 }

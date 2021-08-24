@@ -27,6 +27,8 @@ public class Task {
     //временно string
     private String options;
 
+    private String type = "jar";
+
     @OneToMany(mappedBy = "id")
     private List<TaskInstance> instances;
 
