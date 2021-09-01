@@ -1,4 +1,4 @@
-package com.example.worker.dto;
+package com.example.worker_dto;
 
 
 import lombok.AllArgsConstructor;

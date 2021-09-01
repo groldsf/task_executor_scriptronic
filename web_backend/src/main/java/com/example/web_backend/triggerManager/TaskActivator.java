@@ -4,8 +4,8 @@ import com.example.web_backend.entitys.Task;
 import com.example.web_backend.entitys.TaskInstance;
 import com.example.web_backend.repository.TaskInstanceRepository;
 import com.example.web_backend.repository.TaskRepository;
-import com.example.web_backend.triggerManager.dto.CommandToWorkerDto;
 import com.example.web_backend.triggerManager.mapper.CommandConstructor;
+import com.example.worker_dto.CommandToWorkerDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
 package com.example.web_backend.triggerManager.mapper;
 
 import com.example.web_backend.entitys.TaskInstance;
-import com.example.web_backend.triggerManager.dto.CommandToWorkerDto;
-import com.example.web_backend.triggerManager.dto.TaskInfo;
+import com.example.worker_dto.CommandToWorkerDto;
+import com.example.worker_dto.TaskInfo;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,6 +1,6 @@
 package com.example.worker.controller;
 
-import com.example.worker.dto.CommandToWorkerDto;
+import com.example.worker_dto.CommandToWorkerDto;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

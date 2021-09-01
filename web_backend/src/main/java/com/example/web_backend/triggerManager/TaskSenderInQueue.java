@@ -1,6 +1,6 @@
 package com.example.web_backend.triggerManager;
 
-import com.example.web_backend.triggerManager.dto.CommandToWorkerDto;
+import com.example.worker_dto.CommandToWorkerDto;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
