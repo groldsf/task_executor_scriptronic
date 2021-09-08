@@ -1,6 +1,7 @@
-package com.example.worker.executor;
+package com.example.worker.executor.v1;
 
 import com.example.worker.data_value.ExecutorResult;
+import com.example.worker.executor.v1.ConsoleCommandExecutor;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
